@@ -1,5 +1,6 @@
 using System;
 using Quartz.Impl.Triggers;
+using TimeZoneConverter;
 
 namespace Quartz.Spi.MongoDbJobStore.Models
 {
@@ -25,7 +26,7 @@ namespace Quartz.Spi.MongoDbJobStore.Models
             var trigger = new CronTriggerImpl()
             {
                 CronExpressionString = CronExpression,
-                TimeZone = TimeZoneInfo.FindSystemTimeZoneById(TimeZone)
+                TimeZone = TZConvert.GetTimeZoneInfo(TimeZone)
             };
             FillTrigger(trigger);
             return trigger;

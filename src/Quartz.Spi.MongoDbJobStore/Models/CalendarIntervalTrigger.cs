@@ -2,6 +2,7 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using Quartz.Impl.Triggers;
+using TimeZoneConverter;
 
 namespace Quartz.Spi.MongoDbJobStore.Models
 {
@@ -42,7 +43,7 @@ namespace Quartz.Spi.MongoDbJobStore.Models
                 RepeatIntervalUnit = RepeatIntervalUnit,
                 RepeatInterval = RepeatInterval,
                 TimesTriggered = TimesTriggered,
-                TimeZone = TimeZoneInfo.FindSystemTimeZoneById(TimeZone),
+                TimeZone = TZConvert.GetTimeZoneInfo(TimeZone),
                 PreserveHourOfDayAcrossDaylightSavings = PreserveHourOfDayAcrossDaylightSavings,
                 SkipDayIfHourDoesNotExist = SkipDayIfHourDoesNotExist
             };

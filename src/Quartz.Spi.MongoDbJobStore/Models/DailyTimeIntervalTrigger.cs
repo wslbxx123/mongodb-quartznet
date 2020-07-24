@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using Quartz.Impl.Triggers;
+using TimeZoneConverter;
 
 namespace Quartz.Spi.MongoDbJobStore.Models
 {
@@ -53,7 +54,7 @@ namespace Quartz.Spi.MongoDbJobStore.Models
                 EndTimeOfDay = EndTimeOfDay ?? new TimeOfDay(23, 59, 59),
                 DaysOfWeek = (IReadOnlyCollection<DayOfWeek>)new HashSet<DayOfWeek>(DaysOfWeek),
                 TimesTriggered = TimesTriggered,
-                TimeZone = TimeZoneInfo.FindSystemTimeZoneById(TimeZone)
+                TimeZone = TZConvert.GetTimeZoneInfo(TimeZone)
             };
             FillTrigger(trigger);
             return trigger;
