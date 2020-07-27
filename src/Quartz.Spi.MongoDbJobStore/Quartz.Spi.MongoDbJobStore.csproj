@@ -4,15 +4,15 @@
     <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <Version>1.0.0</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>Quartz.Spi.MongoDbJobStoreClustered</PackageId>
-    <PackageVersion>0.5.0</PackageVersion>
+    <PackageId>MongoDbJobStore</PackageId>
+    <PackageVersion>1.0.6</PackageVersion>
     <Title>MongoDB Job Store for Quartz.NET with cluster support</Title>
-    <Authors>Chris Robison and Frantisek Jandos</Authors>
+    <Authors>Shelley Xiang</Authors>
     <Description>A MongoDB job store for Quartz.NET. This library targets the new MongoDB C# 2.0 driver.</Description>
-    <Copyright>Oriflame Software</Copyright>
-    <PackageProjectUrl>https://github.com/Oriflame/mongodb-quartznet</PackageProjectUrl>
-    <PackageLicenseUrl>https://github.com/Oriflame/mongodb-quartznet/blob/develop/LICENSE.txt</PackageLicenseUrl>
-    <RepositoryUrl>https://github.com/Oriflame/mongodb-quartznet.git</RepositoryUrl>
+    <Copyright>Shelley Xiang</Copyright>
+    <PackageProjectUrl>https://github.com/wslbxx123/mongodb-quartznet</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/wslbxx123/mongodb-quartznet/blob/develop/LICENSE.txt</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/wslbxx123/mongodb-quartznet</RepositoryUrl>
     <RepositoryType>GIT</RepositoryType>
   </PropertyGroup>
   
